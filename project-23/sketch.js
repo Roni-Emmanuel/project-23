@@ -86,9 +86,20 @@ function draw() {
   }
   if (packageSprite.y > 610){
 	packageSprite.velocityY = 0;
-	
+	packageSprite.velocityX = 0;
 }
+if (packageSprite.y > 300){
+	packageSprite.velocityX = 0;
+}
+
+ if (keyDown("LEFT_ARROW")){
+    packageSprite.velocityX = -4;
+ }
   
+ if (keyDown("RIGHT_ARROW")){
+    packageSprite.velocityX = 4;
+ }
+ 
   drawSprites();
    
 }
